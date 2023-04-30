@@ -22,8 +22,8 @@ body{
 
 .loader{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     animation: animate 24s linear infinite;
 }
 
@@ -49,8 +49,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: rgba(255, 255, 255, 0.15);
 }
 
@@ -58,7 +58,7 @@ body{
     background: #fff;
     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
     animation: animateSquare 2s linear infinite;
-    transform-origin: 75px;
+    transform-origin: 60px;
 }
 
 @keyframes animateSquare{
@@ -73,8 +73,8 @@ body{
 
 .loader2{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     animation: animate 24s steps(12) infinite;
 }
 
@@ -100,8 +100,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 30%;
     background: rgba(255, 255, 255, 0.15);
 }
@@ -110,7 +110,7 @@ body{
     background: #fff;
     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
     animation: animateSquare 2s linear infinite;
-    transform-origin: 75px;
+    transform-origin: 60px;
 }
 
 @keyframes animateSquare{
@@ -125,8 +125,8 @@ body{
 
 .loader3{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     animation: animate 24s linear infinite;
 }
 
@@ -152,8 +152,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.15);
 }
@@ -162,7 +162,7 @@ body{
     background: var(--clr);
     box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr), 0 0 40px var(--clr), 0 0 50px var(--clr);
     animation: animateSquare 2.5s linear infinite;
-    transform-origin: 75px;
+    transform-origin: 60px;
 }
 
 @keyframes animateSquare{
@@ -177,8 +177,8 @@ body{
 
 .loader4{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     animation: animate2 6s linear infinite;
 }
 
@@ -204,8 +204,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 25%;
     background: rgba(255, 255, 255, 0.15);
 }
@@ -214,7 +214,7 @@ body{
     background: var(--clr);
     box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr), 0 0 40px var(--clr), 0 0 50px var(--clr);
     animation: animateSquare2 2.5s linear infinite;
-    transform-origin: 75px;
+    transform-origin: 60px;
 }
 
 @keyframes animateSquare2{
@@ -231,7 +231,7 @@ body{
     }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 460px){
     body{
         flex-direction: column;
     }
