@@ -61,3 +61,17 @@ h2 span:nth-child(10){ animation-delay: 0.9s;}
         text-shadow: none;
     }
 }
+
+@media screen and (max-width: 460px){
+    @keyframes animate{
+        10%,50%,90%{
+            text-shadow: none;
+        }
+        25%{
+            text-shadow: none;
+        }
+        75%{
+            text-shadow: none;
+        }
+    }
+}
