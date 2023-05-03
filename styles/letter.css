@@ -67,17 +67,17 @@ h2 span:nth-child(10){ animation-delay: 0.9s;}
         10%,50%,90%{
             color: #fff;
             filter: blur(1px) hue-rotate(0deg);
-            text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+            text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr);
         }
         25%{
             color: #fff;
-            filter: blur(1px) hue-rotate(0deg);
-            text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+            filter: blur(1px) hue-rotate(120deg);
+            text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr);
         }
         75%{
             color: #fff;
-            filter: blur(1px) hue-rotate(0deg);
-            text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+            filter: blur(1px) hue-rotate(2700deg);
+            text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr);
         }
     }
 }

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #fff;
+    color: #fff;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #298089, #6dd5fa, #298089);
+}
+
+header .title{
+    line-height: 2em;
+    padding: 1em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+/* MAIN */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+#container{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+#container .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    max-width: 250px;
+    height: 250px;
+}
+
+
+
+#no-project{
+    color: #000;
+}
+
+/* PYRAMID */
+
+.pyramid{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: animatePyramid 4s linear infinite;
+}
+
+@keyframes animatePyramid{
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.pyramid div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.pyramid div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515,#24ecff);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px) rotateX(30deg);
+    transform-origin: bottom;
+    animation: animatePyramid2 4s linear infinite;
+}
+
+@keyframes animatePyramid2{
+    0%{
+        filter: blur(10px) hue-rotate(0deg);
+    }100%{
+        filter: blur(10px) hue-rotate(360deg);
+    }
+}
+
+.pyramid .glow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #24ecff;
+    transform: rotateX(90deg) translateZ(-125px);
+    animation: animatePyramid2 4s linear infinite;
+    box-shadow: 0 0 60px rgba(36, 236, 255, 0.2), 0 0 100px rgba(36, 236, 255, 0.4), 0 0 150px rgba(36, 236, 255, 0.6), 0 0 200px rgba(36, 236, 255, 0.8), 0 0 250px rgba(36, 236, 255, 1);
+}
+
+
+/* CIRCLE DOTS */
+
+.circleDots{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleDots .ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #24ecff;
+    animation: animateCircleDots 4s linear infinite;
+}
+
+@keyframes animateCircleDots{
+    0%{
+        transform: rotate(0deg);
+    } 100%{
+        transform: rotate(360deg);
+    }
+}
+
+.circleDots .ring::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #24ecff;
+    box-shadow: 0 0 0 5px #24ecff33, 0 0 0 10px #24ecff22, 0 0 0 20px #24ecff11;
+}
+
+.circleDots .ring:nth-child(2){
+    animation: animateCircleDots2 4s linear infinite;
+    animation-delay: -1s;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #93ff2d;
+}
+
+.circleDots .ring:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #93ff2d;
+    box-shadow: 0 0 0 5px #93ff2d33, 0 0 0 10px #93ff2d22, 0 0 0 20px #93ff2d11;
+}
+
+@keyframes animateCircleDots2{
+    0%{
+        transform: rotate(360deg);
+    }100%{
+        transform: rotate(0deg);
+    }
+}
+
+.circleDots .ring:nth-child(3){
+    animation: animateCircleDots2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -66.66px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #e41cf8;
+}
+
+.circleDots .ring:nth-child(3):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #e41cf8;
+    box-shadow: 0 0 0 5px #e41cf833, 0 0 0 10px #e41cf822, 0 0 0 20px #e41cf811;
+}
+
+
+/* Effect Clock */
+
+.effectClock{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.effectClock span{
+    position: absolute;
+    width: 10px;
+    height: 250px;
+    background: transparent;
+    border-bottom: 40px solid #222;
+    transform-origin: bottom;
+    transform: rotate(calc(22.5deg * var(--i)));
+}
+
+.effectClock span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #03a9f4;
+    box-shadow: 0 0 20px #03a9f4;
+    border-radius: 10px;
+    animation: animateEffectClock 1.5s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animateEffectClock{
+    0%{
+        transform: translateY(160px) rotate(0deg);
+        filter: hue-rotate(0deg);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(160px) rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+.effectClock span::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 10px;
+    background: #03a9f4;
+    transform: rotate(8deg);
+    animation: animateColorEffectClock 1.5s linear infinite;
+}
+
+@keyframes animateColorEffectClock{
+    0%{
+        filter: hue-rotate(0deg);
+    }100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.effectClock span i{
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    background: #222;
+    border-left: 2px solid #03a9f4;
+    border-right: 2px solid #03a9f4;
+    transform-origin: top;
+    transform: rotate(79deg);
+    animation: animateColorEffectClock 1.5s linear infinite, animateSideEffectClock 1.5s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animateSideEffectClock{
+    0%,40%,65.1%,100%{
+        background: #222;
+    }40.1%,65%{
+        background: #03a9f4;
+    }
+}
