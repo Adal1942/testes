@@ -1,0 +1,10 @@
+/* ------------------------- Phone mode ------------------------- */
+
+@media screen and (max-width: 460px){
+    #container{
+        grid-gap: 15px;
+        padding: 10px;
+        width: 350px;
+        margin-left: auto;
+    }
+}
