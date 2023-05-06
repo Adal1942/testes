@@ -80,17 +80,18 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 25px;
 }
 
 .circleDots .ring{
     position: relative;
-    width: 75px;
-    height: 75px;
-    margin: -15px;
+    width: 112.5px;
+    height: 112.5px;
+    margin: -22.5px;
     border-radius: 50%;
-    border: 2px solid transparent;
-    border-top: 2px solid #24ecff;
-    animation: animate 4s linear infinite;
+    border: 3px solid transparent;
+    border-top: 3px solid #24ecff;
+    animation: animateCircleDots 4s linear infinite;
 }
 
 @keyframes animateCircleDots{
@@ -104,33 +105,33 @@ main{
 .circleDots .ring::before{
     content: '';
     position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 7.5px;
-    height: 7.5px;
+    top: 9px;
+    right: 9px;
+    width: 11.25px;
+    height: 11.25px;
     border-radius: 50%;
     background: #24ecff;
-    box-shadow: 0 0 0 2.5px #24ecff33, 0 0 0 5px #24ecff22, 0 0 0 10px #24ecff11;
+    box-shadow: 0 0 0 3.75px #24ecff33, 0 0 0 7.5px #24ecff22, 0 0 0 15px #24ecff11;
 }
 
 .circleDots .ring:nth-child(2){
     animation: animateCircleDots2 4s linear infinite;
     animation-delay: -1s;
-    border-top: 2px solid transparent;
-    border-left: 2px solid #93ff2d;
+    border-top: 3px solid transparent;
+    border-left: 3px solid #93ff2d;
 }
 
 .circleDots .ring:nth-child(2):before{
     content: '';
     position: absolute;
     top: initial;
-    bottom: 6px;
-    left: 6px;
-    width: 7.5px;
-    height: 7.5px;
+    bottom: 9px;
+    left: 9px;
+    width: 11.25px;
+    height: 11.25px;
     border-radius: 50%;
     background: #93ff2d;
-    box-shadow: 0 0 0 2.5px #93ff2d33, 0 0 0 5px #93ff2d22, 0 0 0 10px #93ff2d11;
+    box-shadow: 0 0 0 3.75px #93ff2d33, 0 0 0 7.5px #93ff2d22, 0 0 0 15px #93ff2d11;
 }
 
 @keyframes animateCircleDots2{
@@ -145,22 +146,22 @@ main{
     animation: animateCircleDots2 4s linear infinite;
     animation-delay: -3s;
     position: absolute;
-    top: -33.33px;
-    border-top: 2px solid transparent;
-    border-left: 2px solid #e41cf8;
+    top: -50px;
+    border-top: 3px solid transparent;
+    border-left: 3px solid #e41cf8;
 }
 
 .circleDots .ring:nth-child(3):before{
     content: '';
     position: absolute;
     top: initial;
-    bottom: 6px;
-    left: 6px;
-    width: 7.5px;
-    height: 7.5px;
+    bottom: 9px;
+    left: 9px;
+    width: 11.25px;
+    height: 11.25px;
     border-radius: 50%;
     background: #e41cf8;
-    box-shadow: 0 0 0 2.5px #e41cf833, 0 0 0 5px #e41cf822, 0 0 0 10px #e41cf811;
+    box-shadow: 0 0 0 3.75px #e41cf833, 0 0 0 7.5px #e41cf822, 0 0 0 15px #e41cf811;
 }
 
 
@@ -250,22 +251,22 @@ main{
 
 /* ------------------------- effectSquare ------------------------- */
 
-.loader{
+.loader, .loader2{
     position: relative;
     width: 120px;
     height: 120px;
-    animation: animate 24s linear infinite;
+    animation: animateLoader2 6s linear infinite;
 }
 
-@keyframes animate{
+@keyframes animateLoader2{
     0%{
-        transform: rotate(0deg);
-    }100%{
         transform: rotate(360deg);
+    }100%{
+        transform: rotate(0deg);
     }
 }
 
-.loader span{
+.loader span, .loader2 span{
     position: absolute;
     top: 0;
     left: 0;
@@ -274,7 +275,7 @@ main{
     transform: rotate(calc(30deg * var(--i)));
 }
 
-.loader span::before{
+.loader span::before, .loader2 span::before{
     content: '';
     position: absolute;
     top: 0;
@@ -286,7 +287,7 @@ main{
 
 .loader span:nth-child(3n + 3)::before{
     background: #fff;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
     animation: animateSquare 2s linear infinite;
     transform-origin: 60px;
 }
@@ -299,151 +300,12 @@ main{
     }
 }
 
-/* Segundo */
-
-.loader2{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate 24s steps(12) infinite;
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }100%{
-        transform: rotate(360deg);
-    }
-}
-
-.loader2 span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
-}
-
-.loader2 span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 30%;
-    background: rgba(255, 255, 255, 0.15);
-}
+/* Loader2 */
 
 .loader2 span:nth-child(3n + 3)::before{
-    background: #fff;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
-    animation: animateSquare 2s linear infinite;
-    transform-origin: 60px;
-}
-
-@keyframes animateSquare{
-    0%,25%{
-        transform: rotate(0deg);
-    }75%,90%,100%{
-        transform: rotate(180deg);
-    }
-}
-
-/* Terceiro */
-
-.loader3{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate 24s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }100%{
-        transform: rotate(360deg);
-    }
-}
-
-.loader3 span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
-}
-
-.loader3 span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.loader3 span:nth-child(3n + 3)::before{
     background: var(--clr);
-    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr), 0 0 40px var(--clr), 0 0 50px var(--clr);
-    animation: animateSquare 2.5s linear infinite;
-    transform-origin: 60px;
-}
-
-@keyframes animateSquare{
-    0%,25%{
-        transform: rotate(0deg);
-    }75%,90%,100%{
-        transform: rotate(180deg);
-    }
-}
-
-/* Quarto */
-
-.loader4{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate2 6s linear infinite;
-}
-
-@keyframes animate2{
-    0%{
-        transform: rotate(360deg);
-    }100%{
-        transform: rotate(0deg);
-    }
-}
-
-.loader4 span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
-}
-
-.loader4 span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 25%;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.loader4 span:nth-child(3n + 3)::before{
-    background: var(--clr);
-    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr), 0 0 40px var(--clr), 0 0 50px var(--clr);
-    animation: animateSquare2 3s linear infinite;
+    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+    animation: animateSquare2 2s linear infinite;
     transform-origin: 60px;
 }
 
@@ -467,13 +329,6 @@ main{
 
 
 /* ------------------------- REATOR -------------------------------*/
-
-.fullpage-wrapper{
-    width: 100%;
-    height: 100vh;
-    background: /*radial-gradient(#353c44, #222931)*/ #222;
-    display: flex;
-}
 
 .reactor-container{
     width: 150px;
@@ -529,7 +384,7 @@ main{
     position: relative;
     width: 100%;
     height: 100%;
-    animation: reactor-anime 3s infinite;
+    animation: reactor-anime 3s infinite;;
 }
 
 .coil{
@@ -541,38 +396,7 @@ main{
     transform-origin: 7.5px 55px;
     background-color: #073c4b;
     box-shadow: 0 0 2.5px #52fefe inset;
-}
-
-.coil-1{
-    transform: rotate(0deg);
-}
-
-.coil-2{
-    transform: rotate(45deg);
-}
-
-.coil-3{
-    transform: rotate(90deg);
-}
-
-.coil-4{
-    transform: rotate(135deg);
-}
-
-.coil-5{
-    transform: rotate(180deg);
-}
-
-.coil-6{
-    transform: rotate(225deg);
-}
-
-.coil-7{
-    transform: rotate(270deg);
-}
-
-.coil-8{
-    transform: rotate(315deg);
+    transform: rotate(calc(45deg * var(--i)))
 }
 
 @keyframes reactor-anime{
@@ -740,4 +564,4 @@ main{
     }to{
         transform: translateX(200px);
     }
-}
+};
