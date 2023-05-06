@@ -5,6 +5,16 @@
         grid-gap: 15px;
         padding: 10px;
         width: 350px;
-        margin-left: auto;
+        margin: auto;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #container .card{
+        width: 150px;
+        height: 150px;
+    }
+
+    .box{
+        font-size: 0.6em;
     }
 }

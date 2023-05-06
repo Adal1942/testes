@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#ffffe0, #deb887);
+}
+.pendulums{
+    width: 200px;
+    height: 150px;
+    font-size: 16px;
+    border-top: 1.34px solid #5f9ea0;
+    position: relative;
+}
+
+.pendulums span{
+    position: absolute;
+    width: 1px;
+    height: calc((var(--i) - 1)* 5px + 75px);
+    background-color: #5f9ea0;
+    left: 50%;
+    transform-origin: 50% top;
+    transform: rotate(25deg);
+    animation: swing ease-in-out infinite;
+    animation-duration: calc((var(--i) - 1) * 0.02s + 1.5s);
+}
+
+@keyframes swing{
+    50%{
+        transform: rotate(-25deg);
+    }
+}
+
+.pendulums span::before{
+    content: '';
+    position: absolute;
+    width: 7.5px;
+    height: 7.5px;
+    background: radial-gradient(circle at 70% 35%, #ffffff, #00ced1 30%, #4682b4 50%);
+    border-radius: 50%;
+    top: 100%;
+    left: -3.75px;
+    box-shadow: -5px 20px 5px rgba(0, 0, 0, 0.1);
+}

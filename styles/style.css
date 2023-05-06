@@ -29,7 +29,7 @@ header .title{
     text-transform: uppercase;
 }
 
-/* MAIN */
+/* ----------------------- MAIN ----------------------- */
 
 main{
     display: flex;
@@ -65,6 +65,7 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    font-size: 1em;
 }
 
 
@@ -80,17 +81,17 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 1.5625em;
 }
 
 .circleDots .ring{
     position: relative;
-    width: 112.5px;
-    height: 112.5px;
-    margin: -22.5px;
+    width: 7.0313em;
+    height: 7.0313em;
+    margin: -1.4063em;
     border-radius: 50%;
-    border: 3px solid transparent;
-    border-top: 3px solid #24ecff;
+    border: 0.1875em solid transparent;
+    border-top: 0.1875em solid #24ecff;
     animation: animateCircleDots 4s linear infinite;
 }
 
@@ -105,33 +106,33 @@ main{
 .circleDots .ring::before{
     content: '';
     position: absolute;
-    top: 9px;
-    right: 9px;
-    width: 11.25px;
-    height: 11.25px;
+    top: 0.5625em;
+    right: 0.5625em;
+    width: 0.7031em;
+    height: 0.7031em;
     border-radius: 50%;
     background: #24ecff;
-    box-shadow: 0 0 0 3.75px #24ecff33, 0 0 0 7.5px #24ecff22, 0 0 0 15px #24ecff11;
+    box-shadow: 0 0 0 0.2344em #24ecff33, 0 0 0 0.4688em #24ecff22, 0 0 0 0.9375em #24ecff11;
 }
 
 .circleDots .ring:nth-child(2){
     animation: animateCircleDots2 4s linear infinite;
     animation-delay: -1s;
-    border-top: 3px solid transparent;
-    border-left: 3px solid #93ff2d;
+    border-top: 0.1875em solid transparent;
+    border-left: 0.1875em solid #93ff2d;
 }
 
 .circleDots .ring:nth-child(2):before{
     content: '';
     position: absolute;
     top: initial;
-    bottom: 9px;
-    left: 9px;
-    width: 11.25px;
-    height: 11.25px;
+    bottom: 0.5625em;
+    left: 0.5625em;
+    width: 0.7031em;
+    height: 0.7031em;
     border-radius: 50%;
     background: #93ff2d;
-    box-shadow: 0 0 0 3.75px #93ff2d33, 0 0 0 7.5px #93ff2d22, 0 0 0 15px #93ff2d11;
+    box-shadow: 0 0 0 0.2344em #93ff2d33, 0 0 0 0.4688em #93ff2d22, 0 0 0 0.9375em #93ff2d11;
 }
 
 @keyframes animateCircleDots2{
@@ -146,22 +147,22 @@ main{
     animation: animateCircleDots2 4s linear infinite;
     animation-delay: -3s;
     position: absolute;
-    top: -50px;
-    border-top: 3px solid transparent;
-    border-left: 3px solid #e41cf8;
+    top: -3.125em;
+    border-top: 0.1875em solid transparent;
+    border-left: 0.1875em solid #e41cf8;
 }
 
 .circleDots .ring:nth-child(3):before{
     content: '';
     position: absolute;
     top: initial;
-    bottom: 9px;
-    left: 9px;
-    width: 11.25px;
-    height: 11.25px;
+    bottom: 0.5625em;
+    left: 0.5625em;
+    width: 0.7031em;
+    height: 0.7031em;
     border-radius: 50%;
     background: #e41cf8;
-    box-shadow: 0 0 0 3.75px #e41cf833, 0 0 0 7.5px #e41cf822, 0 0 0 15px #e41cf811;
+    box-shadow: 0 0 0 0.2344em #e41cf833, 0 0 0 0.4688em #e41cf822, 0 0 0 0.9375em #e41cf811;
 }
 
 
@@ -169,18 +170,18 @@ main{
 
 .effectClock{
     position: relative;
-    width: 240px;
-    height: 240px;
+    width: 15em;
+    height: 15em;
     display: flex;
     justify-content: center;
 }
 
 .effectClock span{
     position: absolute;
-    width: 4.8px;
-    height: 120px;
+    width: 0.3em;
+    height: 7.5em;
     background: transparent;
-    border-bottom: 19.2px solid #222;
+    border-bottom: 1.2em solid #222;
     transform-origin: bottom;
     transform: rotate(calc(22.5deg * var(--i)));
 }
@@ -189,22 +190,22 @@ main{
     content: '';
     position: absolute;
     width: 100%;
-    height: 24px;
+    height: 1.5em;
     background: #03a9f4;
-    box-shadow: 0 0 19.2px #03a9f4;
-    border-radius: 10px;
+    box-shadow: 0 0 1.2em #03a9f4;
+    border-radius: 0.625em;
     animation: animateEffectClock 1.5s linear infinite;
     animation-delay: calc(0.1s * var(--i));
 }
 
 @keyframes animateEffectClock{
     0%{
-        transform: translateY(76.8px) rotate(0deg);
+        transform: translateY(4.8em) rotate(0deg);
         filter: hue-rotate(0deg);
     }50%{
-        transform: translateY(0px);
+        transform: translateY(0em);
     }100%{
-        transform: translateY(76.8px) rotate(360deg);
+        transform: translateY(4.8em) rotate(360deg);
         filter: hue-rotate(360deg);
     }
 }
@@ -213,8 +214,8 @@ main{
     content: '';
     position: absolute;
     bottom: 0;
-    width: 9.6px;
-    height: 4.8px;
+    width: 0.6em;
+    height: 0.3em;
     background: #03a9f4;
     transform: rotate(8deg);
     animation: animateColorEffectClock 1.5s linear infinite;
@@ -230,11 +231,11 @@ main{
 
 .effectClock span i{
     position: absolute;
-    width: 7.2px;
-    height: 48px;
+    width: 0.45em;
+    height: 3em;
     background: #222;
-    border-left: 1.92px solid #03a9f4;
-    border-right: 1.92px solid #03a9f4;
+    border-left: 0.12em solid #03a9f4;
+    border-right: 0.12em solid #03a9f4;
     transform-origin: top;
     transform: rotate(79deg);
     animation: animateColorEffectClock 1.5s linear infinite, animateSideEffectClock 1.5s linear infinite;
@@ -253,8 +254,8 @@ main{
 
 .loader, .loader2{
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 7.5em;
+    height: 7.5em;
     animation: animateLoader2 6s linear infinite;
 }
 
@@ -280,16 +281,16 @@ main{
     position: absolute;
     top: 0;
     left: 0;
-    width: 15px;
-    height: 15px;
+    width: 0.9375em;
+    height: 0.9375em;
     background: rgba(255, 255, 255, 0.15);
 }
 
 .loader span:nth-child(3n + 3)::before{
     background: #fff;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    box-shadow: 0 0 0.625em #fff, 0 0 1.25em #fff, 0 0 1.875em #fff;
     animation: animateSquare 2s linear infinite;
-    transform-origin: 60px;
+    transform-origin: 3.75em;
 }
 
 @keyframes animateSquare{
@@ -304,9 +305,9 @@ main{
 
 .loader2 span:nth-child(3n + 3)::before{
     background: var(--clr);
-    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+    box-shadow: 0 0 0.625em var(--clr), 0 0 1.25em var(--clr), 0 0 1.875em var(--clr);
     animation: animateSquare2 2s linear infinite;
-    transform-origin: 60px;
+    transform-origin: 3.75em;
 }
 
 @keyframes animateSquare2{
@@ -331,8 +332,8 @@ main{
 /* ------------------------- REATOR -------------------------------*/
 
 .reactor-container{
-    width: 150px;
-    height: 150px;
+    width: 9.375em;
+    height: 9.375em;
     margin: auto;
     position: relative;
 }
@@ -351,33 +352,33 @@ main{
 }
 
 .core-inner{
-    width: 35px;
-    height: 35px;
-    border: 2.5px solid #1b4e5f;
+    width: 2.1875em;
+    height: 2.1875em;
+    border: 0.1563em solid #1b4e5f;
     background-color: #ffffff;
-    box-shadow: 0 0 3.5px 2.5px #52fefe, 0 0 5px 5px #52fefe inset;
+    box-shadow: 0 0 0.2188em 0.1563em #52fefe, 0 0 0.3125em 0.3125em #52fefe inset;
 }
 
 .core-outer{
-    width: 60px;
-    height: 60px;
+    width: 3.75em;
+    height: 3.75em;
     border: 1px solid #52fefe;
     background-color: #ffffff;
-    box-shadow: 0 0 2px 1px #52fefe, 0 0 5px 2.5px #52fefe inset;
+    box-shadow: 0 0 0.125em 0.0625em #52fefe, 0 0 0.3125em 0.1563em #52fefe inset;
 }
 
 .core-wrapper{
-    width: 90px;
-    height: 90px;
+    width: 5.625em;
+    height: 5.625em;
     background-color: #073c4b;
-    box-shadow: 0 0 2.5px 2px #52fefe, 0 0 3px 1px #52fefe inset;
+    box-shadow: 0 0 0.1563em 0.125em #52fefe, 0 0 0.1875em 0.0625em #52fefe inset;
 }
 
 .tunnel{
-    width: 110px;
-    height: 110px;
+    width: 6.875em;
+    height: 6.875em;
     background-color: #ffffff;
-    box-shadow: 0 0 2.5px 1px #52fefe, 0 0 2.5px 2px #52fefe inset;
+    box-shadow: 0 0 0.1563em 0.0625em #52fefe, 0 0 0.1563em 0.125em #52fefe inset;
 }
 
 .coil-container{
@@ -389,13 +390,13 @@ main{
 
 .coil{
     position: absolute;
-    width: 15px;
-    height: 10px;
-    top: calc(50% - 55px);
-    left: calc(50% - 7.5px);
-    transform-origin: 7.5px 55px;
+    width: 0.9375em;
+    height: 0.625em;
+    top: calc(50% - 3.4375em);
+    left: calc(50% - 0.4688em);
+    transform-origin: 0.4688em 3.4375em;
     background-color: #073c4b;
-    box-shadow: 0 0 2.5px #52fefe inset;
+    box-shadow: 0 0 0.1563em #52fefe inset;
     transform: rotate(calc(45deg * var(--i)))
 }
 
@@ -411,13 +412,13 @@ main{
 
 .cont{
     position: relative;
-    top: 8px;
-    bottom: 8px;
-    left: 8px;
-    right: 8px;
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
     margin: auto;
-    width: 100px;
-    height: 100px;
+    width: 6.25em;
+    height: 6.25em;
     transform-style: preserve-3d;
     animation: rotateDice 15s infinite linear;
 }
@@ -429,8 +430,8 @@ main{
 }
 
 .side{
-    width: 100px;
-    height: 100px;
+    width: 6.25em;
+    height: 6.25em;
     position: absolute;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
@@ -439,27 +440,27 @@ main{
 }
 
 .first{
-    transform: translateZ(-50px);
+    transform: translateZ(-3.125em);
 }
 
 .sixth{
-    transform: translateZ(50px);
+    transform: translateZ(3.125em);
 }
 
 .second{
-    transform: translateY(-50px) rotateX(90deg);
+    transform: translateY(-3.125em) rotateX(90deg);
 }
 
 .third{
-    transform: translateY(50px) rotateX(90deg);
+    transform: translateY(3.125em) rotateX(90deg);
 }
 
 .fourth{
-    transform: translateX(-50px) rotateY(90deg);
+    transform: translateX(-3.125em) rotateY(90deg);
 }
 
 .fifth{
-    transform: translateX(50px) rotateY(90deg);
+    transform: translateX(3.125em) rotateY(90deg);
 }
 
 .side span{
@@ -524,8 +525,8 @@ main{
 
 .sun, .moon{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 6.25em;
+    height: 6.25em;
     border-radius: 50%;
     animation:  15s linear infinite;
 }
@@ -534,7 +535,7 @@ main{
     background: radial-gradient(
         yellow,
         orange 35%,
-        transparent calc(35% + 150px) 100%
+        transparent calc(35% + 9.375em) 100%
       );
     animation-name: animate-sun;
 }
@@ -558,10 +559,48 @@ main{
 
 @keyframes animate-moon{
     from{
-        transform: translateX(-200px);
+        transform: translateX(-12.5em);
     }50%{
         background-color: #222;
     }to{
-        transform: translateX(200px);
+        transform: translateX(12.5em);
     }
 };
+
+/* ------------------ PENDULUM ----------------------*/
+
+.pendulums{
+    width: 12.5em;
+    height: 9.375em;
+    position: relative;
+}
+
+.pendulums span{
+    position: absolute;
+    width: 0.0625em;
+    height: calc((var(--i) - 1) * 0.3125em + 4.6875em);
+    margin-top: -4.6875em;
+    background-color: #5f9ea0;
+    transform-origin: 50% top;
+    transform: rotate(25deg);
+    animation: swing ease-in-out infinite;
+    animation-duration: calc((var(--i) - 1) * 0.02s + 1.5s);
+}
+
+@keyframes swing{
+    50%{
+        transform: rotate(-25deg);
+    }
+}
+
+.pendulums span::before{
+    content: '';
+    position: absolute;
+    width: 0.4688em;
+    height: 0.4688em;
+    background: radial-gradient(circle at 70% 35%, #ffffff, #00ced1 30%, #4682b4 50%);
+    border-radius: 50%;
+    top: 100%;
+    left: -0.2344em;
+    box-shadow: -0.3125em 1.25em 0.3125em rgba(255, 255, 255, 0.1);
+}
