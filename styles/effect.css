@@ -13,268 +13,84 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #222;
+    font-size: 1em;
 }
 
-
-.box{
-    margin: auto;
-}
-
-.loader{
+.tree{
     position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate 24s linear infinite;
+    top: -37.5px;
+    width: 75px;
+    height: 75px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(30deg);
+    animation: animateTree 6s linear infinite;
 }
 
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }100%{
-        transform: rotate(360deg);
+.tree::before{
+    content: '⭐';
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 11.25px);
+    font-size: 1em;
+}
+
+@keyframes animateTree{
+    0%
+    {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+    100%
+    {
+        transform: rotateX(-20deg) rotateY(0deg);
     }
 }
-
-.loader span{
+.tree div
+{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
+    transform-style: preserve-3d;
+    transform: translateY(calc(25px * var(--j)));
 }
-
-.loader span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.loader span:nth-child(3n + 3)::before{
-    background: #fff;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
-    animation: animateSquare 2s linear infinite;
-    transform-origin: 60px;
-}
-
-@keyframes animateSquare{
-    0%,25%{
-        transform: rotate(0deg);
-    }75%,90%,100%{
-        transform: rotate(180deg);
-    }
-}
-
-/* Segundo */
-
-.loader2{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate 24s steps(12) infinite;
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }100%{
-        transform: rotate(360deg);
-    }
-}
-
-.loader2 span{
+.tree div.top span
+{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
+    height: 100%; 
+    background: linear-gradient(90deg,#69c069, #77dd77);
+    clip-path: polygon(50% 0%,0% 100%,100% 100%);
+    transform-origin: bottom;
+    border-bottom: 2.5px solid #00000019;
+    transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(43.25px);
 }
-
-.loader2 span::before{
-    content: '';
+.tree div.bottom span{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 87.5px;
+    left: calc(50% - 7.5px);
     width: 15px;
-    height: 15px;
-    border-radius: 30%;
-    background: rgba(255, 255, 255, 0.15);
+    height: 100%; 
+    background: linear-gradient(90deg,#bb4622, #df7214);
+    transform-origin: bottom;
+    border-bottom: 2.5px solid #00000055;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(7.5px);
 }
-
-.loader2 span:nth-child(3n + 3)::before{
-    background: #fff;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
-    animation: animateSquare 2s linear infinite;
-    transform-origin: 60px;
-}
-
-@keyframes animateSquare{
-    0%,25%{
-        transform: rotate(0deg);
-    }75%,90%,100%{
-        transform: rotate(180deg);
-    }
-}
-
-/* Terceiro */
-
-.loader3{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate 24s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }100%{
-        transform: rotate(360deg);
-    }
-}
-
-.loader3 span{
+.shadow
+{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
+    width: 75px;
+    height: 75px;
+    background: #0002;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(-125px);
+    filter: blur(5px);
 }
 
-.loader3 span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-}
 
-.loader3 span:nth-child(3n + 3)::before{
-    background: var(--clr);
-    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr), 0 0 40px var(--clr), 0 0 50px var(--clr);
-    animation: animateSquare 2.5s linear infinite;
-    transform-origin: 60px;
-}
 
-@keyframes animateSquare{
-    0%,25%{
-        transform: rotate(0deg);
-    }75%,90%,100%{
-        transform: rotate(180deg);
-    }
-}
 
-/* Quarto */
-
-.loader4{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    animation: animate2 6s linear infinite;
-}
-
-@keyframes animate2{
-    0%{
-        transform: rotate(360deg);
-    }100%{
-        transform: rotate(0deg);
-    }
-}
-
-.loader4 span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(calc(30deg * var(--i)));
-}
-
-.loader4 span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 25%;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.loader4 span:nth-child(3n + 3)::before{
-    background: var(--clr);
-    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr), 0 0 40px var(--clr), 0 0 50px var(--clr);
-    animation: animateSquare2 3s linear infinite;
-    transform-origin: 60px;
-}
-
-@keyframes animateSquare2{
-    0%,25%{
-        transform: rotate(0deg);
-        filter: hue-rotate(0deg);
-    }50%{
-        transform: rotate(180deg);
-        filter: hue-rotate(180deg);
-    }
-    75%{
-        transform: rotate(270deg);
-        filter: hue-rotate(270deg);
-    }
-    100%{
-        transform: rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-}
-
-@media screen and (max-width: 460px){
-    body{
-        flex-direction: column;
-    }
-
-    .loader, .loader2, .loader3, .loader4{
-        width: 80px;
-        height: 80px;
-    }
-
-    .loader span::before{
-        width: 10px;
-        height: 10px;
-    }
-    .loader2 span::before{
-        width: 10px;
-        height: 10px;
-    }
-    .loader3 span::before{
-        width: 10px;
-        height: 10px;
-    }
-    .loader4 span::before{
-        width: 10px;
-        height: 10px;
-    }
-
-    .loader span:nth-child(3n + 3)::before{
-        transform-origin: 40px;
-    }
-
-    .loader2 span:nth-child(3n + 3)::before{
-        transform-origin: 40px;
-    }
-
-    .loader3 span:nth-child(3n + 3)::before{
-        transform-origin: 40px;
-    }
-
-    .loader4 span:nth-child(3n + 3)::before{
-        transform-origin: 40px;
-    }
-}

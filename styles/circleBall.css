@@ -15,91 +15,89 @@ body{
     background: #111;
 }
 
-.container{
+.hourglass{
+    width: 4.3em;
+    height: 9.8em;
+    font-size: 20px;
     position: relative;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    animation: rotating 2s linear infinite;
 }
 
-.container .ring{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: -30px;
-    border-radius: 50%;
-    border: 4px solid transparent;
-    border-top: 4px solid #24ecff;
-    animation: animate 4s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    } 100%{
-        transform: rotate(360deg);
-    }
-}
-
-.container .ring::before{
-    content: '';
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #24ecff;
-    box-shadow: 0 0 0 5px #24ecff33, 0 0 0 10px #24ecff22, 0 0 0 20px #24ecff11;
-}
-
-.container .ring:nth-child(2){
-    animation: animate2 4s linear infinite;
-    animation-delay: -1s;
-    border-top: 4px solid transparent;
-    border-left: 4px solid #93ff2d;
-}
-
-.container .ring:nth-child(2):before{
-    content: '';
-    position: absolute;
-    top: initial;
-    bottom: 12px;
-    left: 12px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #93ff2d;
-    box-shadow: 0 0 0 5px #93ff2d33, 0 0 0 10px #93ff2d22, 0 0 0 20px #93ff2d11;
-}
-
-@keyframes animate2{
-    0%{
-        transform: rotate(360deg);
+@keyframes rotating{
+    0%,90%{
+        transform: rotate(0);
     }100%{
-        transform: rotate(0deg);
+        transform: rotate(0.5turn);
     }
 }
 
-.container .ring:nth-child(3){
-    animation: animate2 4s linear infinite;
-    animation-delay: -3s;
-    position: absolute;
-    top: -66.66px;
-    border-top: 4px solid transparent;
-    border-left: 4px solid #e41cf8;
-}
-
-.container .ring:nth-child(3):before{
+.hourglass::after{
     content: '';
     position: absolute;
-    top: initial;
-    bottom: 12px;
-    left: 12px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #e41cf8;
-    box-shadow: 0 0 0 5px #e41cf833, 0 0 0 10px #e41cf822, 0 0 0 20px #e41cf811;
+    width: 0.2em;
+    height: 4.8em;
+    background-color: #00bfff;
+    top: 1em;
+    animation: flow 2s linear infinite;
+}
+
+@keyframes flow{
+    10%,100%{
+        transform: translateY(3.2em);
+    }
+}
+
+.top,.bottom{
+    width: 3.5em;
+    height: 3.5em;
+    border-style: solid;
+    border-color: #8b4513;
+    border-width: 0.2em 0.2em 0.6em 0.6em;
+    border-radius: 50% 100% 50% 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+.top{
+    transform: rotate(-45deg);
+}
+
+.bottom{
+    transform: rotate(135deg);
+}
+
+.top::before,.bottom::before{
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #00bfff;
+    animation: 2s linear infinite;
+}
+
+.top::before{
+    border-radius: 0 100% 0 0;
+    animation-name: drop-sand;
+}
+
+@keyframes drop-sand{
+    to{
+        transform: translate(-2.5em, 2.5em);
+    };
+}
+
+.bottom::before{
+    border-radius: 0 0 0 35%;
+    transform: translate(2.5em, -2.5em);
+    animation-name: fill-sand;
+}
+
+@keyframes fill-sand{
+    to{
+        transform: translate(0, 0);
+    };
 }

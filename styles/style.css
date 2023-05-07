@@ -604,3 +604,210 @@ main{
     left: -0.2344em;
     box-shadow: -0.3125em 1.25em 0.3125em rgba(255, 255, 255, 0.1);
 }
+
+/* ------------------ Loading spin ----------------------- */
+
+svg{
+    max-width: 15em;
+    stroke: #222;
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 5%;
+}
+
+svg use{
+    stroke: #00BFFF;
+    animation: animateLoadingSpin 2s linear infinite;
+}
+
+@keyframes animateLoadingSpin{
+    to{
+        stroke-dashoffset: 0.625em;
+    }
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.iconInfinit h2{
+    text-align: center;
+    position: relative;
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 0 0.625em 0.625em rgb(66, 66, 66);
+    box-shadow: 0.625em 0 0 #222;
+}
+
+/* ----------- MAGIC CUBE ------------------------- */
+
+#magicCube{
+    position: relative;
+    width: 8.125em;
+    height: 8.125em;
+    transform-style: preserve-3d;
+    animation: animateMagicCube 10s linear infinite;
+}
+
+@keyframes animateMagicCube{
+    0%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+}
+
+#magicCube::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8.125em;
+    height: 8.125em;
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotateX(90deg) translateZ(-5.9581em);
+    filter: blur(0.8125em);
+}
+
+#magicCube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+#magicCube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#magicCube div span:nth-child(1){
+    transform: rotateY(0deg) translate3d(0, 0, 4.0625em);
+    background: url(../assets/img/1.png);
+}
+
+#magicCube div span:nth-child(2){
+    transform: rotateY(90deg) translate3d(0, 0, 4.0625em);
+    background: url(../assets/img/2.png);
+}
+
+#magicCube div span:nth-child(3){
+    transform: rotateY(180deg) translate3d(0, 0, 4.0625em);
+    background: url(../assets/img/3.png);
+}
+
+#magicCube div span:nth-child(4){
+    transform: rotateY(270deg) translate3d(0, 0, 4.0625em);
+    background: url(../assets/img/4.png);
+}
+
+#magicCube .top{
+    top: 0;
+    left: 0;
+    background: url(../assets/img/5.png);
+    transform: rotateX(90deg) translate3d(0, 0, 4.0625em);
+}
+
+#magicCube div span:nth-child(1),#magicCube div span:nth-child(2),#magicCube div span:nth-child(3),#magicCube div span:nth-child(4),#magicCube .top{
+    content: '';
+    position: absolute;
+    width: 8.125em;
+    height: 8.125em;
+    background-size: 8.125em; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ------------------------ Tree ----------------------------*/
+
+.tree{
+    position: relative;
+    top: -2.3438em;
+    width: 4.6875em;
+    height: 4.6875em;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(30deg);
+    animation: animateTree 6s linear infinite;
+}
+
+.tree::before{
+    content: '⭐';
+    position: absolute;
+    top: -1.875em;
+    left: calc(50% - 0.7031em);
+    font-size: 1em;
+}
+
+@keyframes animateTree{
+    0%
+    {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+    100%
+    {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+}
+.tree div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateY(calc(1.5625em * var(--j)));
+}
+.tree div.top span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(90deg,#69c069, #77dd77);
+    clip-path: polygon(50% 0%,0% 100%,100% 100%);
+    transform-origin: bottom;
+    border-bottom: 0.1563em solid #00000019;
+    transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(2.7031em);
+}
+.tree div.bottom span{
+    position: absolute;
+    top: 5.4688em;
+    left: calc(50% - 0.4688em);
+    width: 0.9375em;
+    height: 100%; 
+    background: linear-gradient(90deg,#bb4622, #df7214);
+    transform-origin: bottom;
+    border-bottom: 0.1563em solid #00000055;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(0.4688em);
+}
+.shadow
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4.6875em;
+    height: 4.6875em;
+    background: #0002;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(-7.8125em);
+    filter: blur(0.3125em);
+}

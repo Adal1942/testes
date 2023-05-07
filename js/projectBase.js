@@ -161,6 +161,79 @@ const project = [
             </div>
         </div>`,
     },
+    {
+        id: 9,
+        codigo: 
+        `<div class="card">
+            <div class="box">
+                <div class="iconInfinit">
+                    <svg viewBox="  -2000 -1000 4000 2000">
+                        <path id="stroke" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+                        <use xlink:href="#stroke" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+                    </svg>
+                    <h2>Carregando...</h2>
+                </div>
+            </div>
+        </div>` 
+    },
+    {
+        id: 10,
+        codigo: 
+        `<div class="card">
+            <div class="box">
+                <div id="magicCube">
+                    <div class="top"></div>
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    },
+    {
+        id: 11,
+        codigo: 
+        `<div class="card">
+                <div class="box">
+                    <div class="tree">
+                        <div class="top" style="--j:0;">
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                        <div class="top" style="--j:1;">
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                        <div class="top" style="--j:2;">
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                        <div class="top" style="--j:3;">
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                        <div class="bottom">
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                        <span class="shadow"></span>
+                    </div>
+                </div>
+            </div>`
+    },
 ];
 
 const listContainer = document.querySelector("#container");

@@ -1,63 +1,50 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-.sky{
-    width: 100vw;
-    height: 100vh;
-    background-color: #87ceeb;
-    /*background-image: linear-gradient(#2980b9,#6dd5fa,#ffffff);*/
+body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #222;
+    font-size: 1em;
+}
+
+svg{
+    max-width: 15em;
+    stroke: #222;
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 5%;
+    margin-top: 9.375em;
+}
+
+svg use{
+    stroke: #00BFFF;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    to{
+        stroke-dashoffset: 0.625em;
+    }
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.iconInfinit h2{
+    text-align: center;
     position: relative;
-    overflow: hidden;
-    animation: animate-sky 10s linear infinite;
-}
-
-.sun, .moon{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation:  10s linear infinite;
-}
-
-.sun{
-    background: radial-gradient(
-        yellow,
-        orange 35%,
-        transparent calc(35% + 150px) 100%
-      );
-    animation-name: animate-sun;
-}
-
-.moon{
-    background-color: #708090;
-    animation-name: animate-moon;
-}
-
-@keyframes animate-sky{
-    50%{
-        background-color: #000;
-    }
-}
-
-@keyframes animate-sun{
-    50%{
-        box-shadow: 0 0 5em 1em #ffa600b6;
-    }
-}
-
-@keyframes animate-moon{
-    from{
-        transform: translateX(-300px);
-    }50%{
-        background-color: #000;
-    }to{
-        transform: translateX(300px);
-    }
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 0 0.625em 0.625em rgb(66, 66, 66);
+    box-shadow: 0.625em 0 0 #222;
 }
