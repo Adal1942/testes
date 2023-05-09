@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.buttonsStyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5em;
+}
+
+.styleOne{
+    position: relative;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+    background: #fff;
+    margin: 20px;
+}
+
+.styleOne::before, .styleOne::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(35deg, #00ccff, #222, #d40044);
+    transition: 0.3s;
+}
+
+.styleOne:hover::before{
+    inset: -2px;
+}
+
+.styleOne:hover::after{
+    inset: -2px;
+    filter: blur(10px);
+}
+
+.styleOne span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #222;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #111;
+    overflow: hidden;
+}
+
+.styleOne span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.075);
+    transform: skew(25deg);
+}
+
+/* --------------- Two ------------------*/
+
+.styleTwo{
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #00ccff, #d40044);
+}
+
+/* --------------- Three ------------------*/
+
+.styleThree{
+    position: relative;
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.styleThree:hover{
+    background: #00ccff;
+    color: #00ccff;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 25px #00ccff
+}
+
+.styleThree::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #222;
+}
+
+.styleThree span{
+    position: relative;
+    z-index: 10;
+}
+
+
+/* --------------- Four ------------------*/
+
+.styleFour{
+    position: relative;
+    text-decoration: none;
+    width: 160px; 
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styleFour::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px #00ccff, 0 0 0 20px #222, 0 0 0 22px #00ccff;
+    transition: 0.5;
+}
+
+.styleFour::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #222;
+    transform: rotate(45deg);
+    transition: 0.7s;
+}
+
+.styleFour span{
+    position: absolute;
+    color: #00ccff;
+    z-index: 10;
+    transition: 0.7s;
+    font-size: 2em;
+}
+
+.styleFour:hover::before{
+    inset: 30px;
+}
+
+.styleFour:hover::after{
+    inset: 0px;
+    transform: rotate(-45deg);
+    filter: drop-shadow(0 0 10px #00ccff) drop-shadow(0 0 20px #00ccff) drop-shadow(0 0 30px #00ccff);
+}
